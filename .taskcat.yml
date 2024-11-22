@@ -1,0 +1,11 @@
+project:
+  name: mycloudformation
+  regions:
+    - us-east-1  # Thay thế bằng vùng bạn đang sử dụng
+tests:
+  default:
+    template: cloudformation.yaml
+    parameters:
+      VpcCidrBlock: "10.0.0.0/16"  # Thay thế giá trị phù hợp
+      PublicSubnetCidrBlock: "10.0.1.0/24"  # Thay thế giá trị phù hợp
+      InstanceType: "t2.micro"

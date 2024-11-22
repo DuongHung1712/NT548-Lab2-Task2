@@ -1,0 +1,14 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - pip install cfn-lint taskcat
+  build:
+    commands:
+      - cfn-lint cloudformation.yaml
+      - taskcat test run
+artifacts:
+  files:
+    - cloudformation.yaml
+
